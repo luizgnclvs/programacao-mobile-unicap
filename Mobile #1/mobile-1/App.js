@@ -10,7 +10,7 @@ export default function App() {
           <Text>All canon lightsabers colors in Star Wars media.</Text>
         </View>
       </View>
-      <ScrollView contentContainerStyle={styles.scroll}>
+      <ScrollView>
         <View style={styles.pictureContainer}>
           <Image style={styles.picture} source={require('./assets/blue.png')} />
           <Text style={styles.pictureText}>Blue</Text>
@@ -73,11 +73,8 @@ const styles = StyleSheet.create({
   h1: {
     fontSize: 28,
   },
-  scroll: {
-    gap: 10,
-  },
   pictureContainer: {
-    marginBottom: 5,
+    marginBottom: 20,
   },
   picture: {
     width: 300,
