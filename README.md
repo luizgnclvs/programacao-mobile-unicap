@@ -4,4 +4,4 @@ Exercícios propostos pelo professor ao decorrer da disciplina de Programação 
 
 ### Índice
 
-- Atividade 1 [[DEPLOY](https://mobile-1-lightsaber-colors-rg6v1c0hr-luizgnclvs.vercel.app/) | [REPO](https://github.com/luizgnclvs/programacao-mobile-unicap/tree/main/Mobile%20%231)]
+- Atividade 1 [[DEPLOY](https://expo.dev/@luizgnclvs/mobile-1?serviceType=classic&distribution=expo-go) | [REPO](https://github.com/luizgnclvs/programacao-mobile-unicap/tree/main/Mobile%20%231)]
