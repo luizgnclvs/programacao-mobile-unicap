@@ -1,8 +1,16 @@
 import { StyleSheet, View } from 'react-native';
-import MapView, { Polygon } from 'react-native-maps';
+import MapView, { Geojson } from 'react-native-maps';
 
-export default function PolygonExample() {
-		return (
+export default function GeojsonExample() {
+	const polygon = {
+		type: "Feature",
+		geometry: {
+			type: "Point",
+			coordinates: [40.711482, -74.005778]
+		}
+	};
+
+	return (
 		<View style={styles.container}>
 			<MapView
 				style={styles.map}
@@ -13,20 +21,15 @@ export default function PolygonExample() {
 					longitudeDelta: 0.0421,
 				}}
 			>
-				<Polygon
-					coordinates={[
-						{ latitude: 40.716482, longitude: -74.002778 },
-						{ latitude: 40.711350, longitude: -74.005773 },
-						{ latitude: 40.719130, longitude: -74.008765 },
-						{ latitude: 40.716482, longitude: -74.002778 },
-					]}
-					fillColor={'rgba(0, 255, 0, 0.3)'}
-					strokeColor={'green'}
+				<Geojson
+					geojson={polygon}
+					strokeColor="red"
 					strokeWidth={2}
+					fillColor="green"
 				/>
 			</MapView>
 		</View>
-	);
+		);
 }
 
 const styles = StyleSheet.create({

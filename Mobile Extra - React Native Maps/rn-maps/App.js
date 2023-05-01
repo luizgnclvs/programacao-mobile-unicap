@@ -5,8 +5,9 @@ import CalloutExample from './components/CalloutExample';
 import PolylineExample from './components/PolylineExample';
 import PolygonExample from './components/PolygonExample';
 import CircleExample from './components/CircleExample';
-import OverlayExample from './components/HeatmapExample';
 import HeatmapExample from './components/HeatmapExample';
+import OverlayExample from './components/OverlayExample';
+import GeojsonExample from './components/GeojsonExample';
 
 export default function App() {
 	return (
@@ -18,6 +19,8 @@ export default function App() {
 			{/* <PolygonExample /> */}
 			{/* <CircleExample /> */}
 			{/* <HeatmapExample /> */}
+			{/* <OverlayExample /> */}
+			{/* <GeojsonExample /> */}
 		</View>
 	);
 }

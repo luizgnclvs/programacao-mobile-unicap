@@ -1,8 +1,10 @@
 import { StyleSheet, View } from 'react-native';
-import MapView, { Polygon } from 'react-native-maps';
+import MapView, { Overlay } from 'react-native-maps';
 
-export default function PolygonExample() {
-		return (
+export default function OverlayExample() {
+	const image = require('../assets/overlay.png')
+
+	return (
 		<View style={styles.container}>
 			<MapView
 				style={styles.map}
@@ -13,16 +15,13 @@ export default function PolygonExample() {
 					longitudeDelta: 0.0421,
 				}}
 			>
-				<Polygon
-					coordinates={[
-						{ latitude: 40.716482, longitude: -74.002778 },
-						{ latitude: 40.711350, longitude: -74.005773 },
-						{ latitude: 40.719130, longitude: -74.008765 },
-						{ latitude: 40.716482, longitude: -74.002778 },
+				<Overlay
+					image={image}
+					bounds={[
+						[40.712216, -74.22655],
+						[40.773941, -74.12544],
 					]}
-					fillColor={'rgba(0, 255, 0, 0.3)'}
-					strokeColor={'green'}
-					strokeWidth={2}
+					opacity={1.0}
 				/>
 			</MapView>
 		</View>
