@@ -2,7 +2,7 @@ import { ActivityIndicator, FlatList, Text, View } from "react-native";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 import TaskCard from "../components/TaskCard";
-import { getTasks, updateTask } from "../services/TaskService";
+import { getTasks, updateTask, deleteTask } from "../services/TaskService";
 import TaskInput from "../components/TaskInput";
 
 export default function TaskScreen() {
@@ -14,6 +14,13 @@ export default function TaskScreen() {
 
 	const mutation = useMutation({
 		mutationFn: updateTask,
+		onSuccess: () => {
+			queryClient.invalidateQueries({ queryKey: ["tasks"] });
+		},
+	});
+
+	const deleteMutation = useMutation({
+		mutationFn: deleteTask,
 		onSuccess: () => {
 			queryClient.invalidateQueries({ queryKey: ["tasks"] });
 		},
@@ -48,13 +55,14 @@ export default function TaskScreen() {
 			<TaskInput />
 			{isFetching && <Text>IS FETCHING</Text>}
 			<FlatList
-				style={{ flex: 1 }}
+				style={{ flex: 1, width: "90%" }}
 				data={data.results}
 				keyExtractor={(item) => item.objectId}
 				renderItem={({ item }) => (
 					<TaskCard
 						task={item}
 						taskDoneChange={mutation.mutate}
+						taskDelete={deleteMutation.mutate}
 					/>
 				)}
 			/>

@@ -3,8 +3,8 @@ import axios from "axios";
 const instance = axios.create({
 	baseURL: "https://parseapi.back4app.com/classes/",
 	headers: {
-		"X-Parse-Application-Id": "eFczibVN2ivGQXeCfNMCFXuDJceLxGyAxvJ5PExy",
-		"X-Parse-REST-API-Key": "D1sxqz5tqBUWujf7DMRi72V9h8QGBuNDRTQDBtTY",
+		"X-Parse-Application-Id": "35i1bwqQYqrdQkdJXbq35zo8wNzKQhTEiR4Jnaqm",
+		"X-Parse-REST-API-Key": "hGGjHJor5qvIn95CFWemw1mX2238uRtxN45d4dlR",
 	},
 });
 
@@ -21,3 +21,5 @@ export const createTask = (newTask) => {
 		headers: { "Content-Type": "application/json" },
 	});
 }
+
+export const deleteTask = (task) => instance.delete(`/Task/${task.objectId}`);

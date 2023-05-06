@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "space-between",
 		marginBottom: 16,
+		paddingHorizontal: 15,
 	},
 	input: {
 		flex: 1,
