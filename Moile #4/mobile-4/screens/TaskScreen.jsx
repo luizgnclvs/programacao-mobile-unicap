@@ -3,6 +3,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 import TaskCard from "../components/TaskCard";
 import { getTasks, updateTask } from "../services/TaskService";
+import TaskInput from "../components/TaskInput";
 
 export default function TaskScreen() {
 	const queryClient = useQueryClient();
@@ -44,6 +45,7 @@ export default function TaskScreen() {
 				justifyContent: "center",
 			}}
 		>
+			<TaskInput />
 			{isFetching && <Text>IS FETCHING</Text>}
 			<FlatList
 				style={{ flex: 1 }}

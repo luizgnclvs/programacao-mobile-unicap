@@ -15,3 +15,9 @@ export const updateTask = (task) => {
 		headers: { "Content-Type": "application/json" },
 	});
 };
+
+export const createTask = (newTask) => {
+	return instance.post('/Task', newTask, {
+		headers: { "Content-Type": "application/json" },
+	});
+}
