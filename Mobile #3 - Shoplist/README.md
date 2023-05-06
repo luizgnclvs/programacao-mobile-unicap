@@ -1,4 +1,4 @@
-# Atividade 3 - Lista de Compras [ [DEPLOY](https://expo.dev/@luizgnclvs/shoplist?serviceType=classic&distribution=expo-go) ]
+# Atividade 3 - Lista de Compras
 
 Contruir um expo-app de acordo com diagrama apresentado em aula, utilizando UI Frameworks e com os seguintes requisitos:
 
@@ -9,3 +9,5 @@ Contruir um expo-app de acordo com diagrama apresentado em aula, utilizando UI F
   - Também é possível remover um item da lista de compras
 
 Utilize um componente FlatList para exibir os diversos itens de compras que o usuário adicionou.
+
+[ [DEPLOY](https://expo.dev/@luizgnclvs/shoplist?serviceType=classic&distribution=expo-go) ]
