@@ -2,8 +2,8 @@ import { ActivityIndicator, FlatList, Text, View } from "react-native";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 import TaskCard from "../components/TaskCard";
-import { getTasks, updateTask, deleteTask } from "../services/TaskService";
 import TaskInput from "../components/TaskInput";
+import { getTasks, updateTask, deleteTask } from "../services/TaskService";
 
 export default function TaskScreen() {
 	const queryClient = useQueryClient();
