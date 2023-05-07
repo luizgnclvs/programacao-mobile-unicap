@@ -5,7 +5,7 @@ export default function TaskCard({ task, taskDoneChange, taskDelete}) {
 		taskDoneChange({ objectId: task.objectId, done: !task.done });
 	};
 
-	const handleDeleteTask = (task) => {
+	const handleDeleteTask = () => {
 		taskDelete(task);
 	};
 

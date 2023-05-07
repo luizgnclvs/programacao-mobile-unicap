@@ -12,7 +12,7 @@ export default function TaskScreen() {
 		queryFn: getTasks,
 	});
 
-	const mutation = useMutation({
+	const updateMutation = useMutation({
 		mutationFn: updateTask,
 		onSuccess: () => {
 			queryClient.invalidateQueries({ queryKey: ["tasks"] });
@@ -61,7 +61,7 @@ export default function TaskScreen() {
 				renderItem={({ item }) => (
 					<TaskCard
 						task={item}
-						taskDoneChange={mutation.mutate}
+						taskDoneChange={updateMutation.mutate}
 						taskDelete={deleteMutation.mutate}
 					/>
 				)}
